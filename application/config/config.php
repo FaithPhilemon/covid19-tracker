@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://covid-19.test/';
+$config['base_url'] = 'https://faithphilemon.github.io/covid19-tracker/';
 
 /*
 |--------------------------------------------------------------------------
