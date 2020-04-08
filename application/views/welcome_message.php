@@ -20,37 +20,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
                 <div class="tile">
                     <div class="wrapper">
                         <div class="header">
-                            <h1>COVID-19 Information</h1>
+                          <img src="<?=base_url('assets/img/c19.png') ?>" height="40" width="50" alt="Image 1">
+                          <h1>COVID-19 Information</h1>
                         </div>
                     </div>
-                </div> 
-
-                <img src="<?=base_url('assets/img/c19.png') ?>" height="200" alt="Image 1">     
-
-                
-
-                 <p class="text-justify">
-                    Coronavirus disease (COVID-19) is an infectious disease caused by a new virus.
-                    The disease causes respiratory illness (like the flu) with symptoms such as a 
-                    cough, fever, and in more severe cases, difficulty breathing. You can protect yourself
-                     by washing your hands frequently, avoiding touching your face, and avoiding close 
-                     contact (1 meter or 3 feet) with people who are unwell.
-                </p>
- 
-                        
-            </div>
-
-            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
-                <div class="tile">
-                    <div class="wrapper">
-                        <div class="header">
-                            <h1>Global Stats</h1>
-                        </div>
-                    </div>
+                    
 
                     <div class="dates">
                         <div class="start">
@@ -80,11 +58,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
                     <div class="footer">
-                        <a href="#" class="Cbtn Cbtn-primary">View</a>
-                        <a href="#" class="Cbtn Cbtn-danger">Delete</a>
+                        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen" class="Cbtn Cbtn-primary btn-sm">More Details</a>
+                        <!-- <a href="#" class="Cbtn Cbtn-danger">Delete</a> -->
                     </div>
+
                 </div> 
+
+                  
+
+                
+
+                 <!-- <p class="text-justify">
+                    Coronavirus disease (COVID-19) is an infectious disease caused by a new virus.
+                    The disease causes respiratory illness (like the flu) with symptoms such as a 
+                    cough, fever, and in more severe cases, difficulty breathing. You can protect yourself
+                     by washing your hands frequently, avoiding touching your face, and avoiding close 
+                     contact (1 meter or 3 feet) with people who are unwell.
+                </p> -->
+ 
+                        
             </div>
+
         </div>
 
         <hr>
