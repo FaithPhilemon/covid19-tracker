@@ -35,7 +35,7 @@ $config['base_url'] = 'https://faithphilemon.github.io/covid19-tracker/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
