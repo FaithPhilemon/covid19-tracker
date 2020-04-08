@@ -29,6 +29,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </div>
                     
+                    <?php
+                        print_r($covid_countries);
+                    ?>
 
                     <div class="dates">
                         <div class="start">

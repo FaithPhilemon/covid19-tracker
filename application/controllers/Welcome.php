@@ -18,18 +18,19 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
-		
+	public function index(){
 
-		$covid_json_data = file_get_contents('https://corona-virus-stats.herokuapp.com/api/v1/cases/general-stats');
+		$url = "https://api.covid19api.com/summary";
+
+		$covid_json_data = file_get_contents($url);
 		
 		$covid_array = json_decode($covid_json_data, true);
 
 		$data = array(
-			'covid19_data' => $covid_array,
+			'covid_global' => $covid_array['Global'],
+			'covid_countries' => $covid_array['Countries'],
 		);
 
-		$this->load->view('welcome_message', $data);
+		$this->load->view('index_view', $data);
 	}
 }
