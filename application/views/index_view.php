@@ -25,12 +25,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="wrapper">
                         <div class="header">
                           <img src="<?=base_url('assets/img/c19.png') ?>" height="40" width="50" alt="Image 1">
-                          <h1>COVID-19 Information</h1>
+                          <h1>COVID-19 Global Stats</h1>
                         </div>
                     </div>
                     
                     <?php
-                        print_r($covid_countries);
+                        // print_r($covid_countries);
                     ?>
 
                     <div class="dates">
@@ -43,22 +43,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </div>
 
-                    <div class="stats">
+                    
 
-                        <div>
-                            <strong>INVITED</strong> 3098
-                        </div>
+                        <?php 
+                         foreach($covid_countries as $country){
+                            echo '
+                            <div class="stats row text-uppercase">
+                                <div class="col-md-2">
+                                    <img src="https://www.countryflags.io/'.$country["CountryCode"].'/flat/64.png">
+                                    <strong>'.$country["Country"].'</strong> 
+                                </div>
+        
+                                <div class="col-md-2">
+                                    <strong>New Confirmed </strong> '.$country["NewConfirmed"].'
+                                </div>
+        
+                                <div class="col-md-2">
+                                    <strong>Total Confirmed</strong> '.$country["TotalConfirmed"].'
+                                </div>
+        
+                                <div class="col-md-2">
+                                    <strong>NewDeaths</strong> '. $country["NewDeaths"] .'
+                                </div>
+        
+                                <div class="col-md-2">
+                                    <strong>Total Deaths</strong> '.$country["TotalDeaths"].'
+                                </div>
 
-                        <div>
-                            <strong>JOINED</strong> 562
-                        </div>
+                                <div class="col-md-2">
+                                    <strong>Total Recovered</strong> '.$country["TotalRecovered"].'
+                                </div>
 
-                        <div>
-                            <strong>DECLINED</strong> 182
-                        </div>
+                            </div>
+                            ';
+                         }
+                        
+                        ?>
 
-                    </div>
-
+                   
 
                     <div class="footer">
                         <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen" class="Cbtn Cbtn-primary btn-sm">More Details</a>
