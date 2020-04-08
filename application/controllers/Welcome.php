@@ -20,6 +20,16 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		
+
+		$covid_json_data = file_get_contents('https://corona-virus-stats.herokuapp.com/api/v1/cases/general-stats');
+		
+		$covid_array = json_decode($covid_json_data, true);
+
+		$data = array(
+			'covid19_data' => $covid_array,
+		);
+
+		$this->load->view('welcome_message', $data);
 	}
 }

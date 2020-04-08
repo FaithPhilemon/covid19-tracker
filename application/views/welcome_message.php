@@ -4,86 +4,93 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>Covid-19 Tracker</title>
 
-	<style type="text/css">
+	<link href="<?=base_url('assets/css/style.css')?>" rel="stylesheet" id="bootstrap-css">
+	
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
 
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
-
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
-
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
 </head>
 <body>
 
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
 
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="tile">
+                    <div class="wrapper">
+                        <div class="header">
+                            <h1>COVID-19 Information</h1>
+                        </div>
+                    </div>
+                </div> 
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
+                <img src="<?=base_url('assets/img/c19.png') ?>" height="200" alt="Image 1">     
 
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
+                
 
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
+                 <p class="text-justify">
+                    Coronavirus disease (COVID-19) is an infectious disease caused by a new virus.
+                    The disease causes respiratory illness (like the flu) with symptoms such as a 
+                    cough, fever, and in more severe cases, difficulty breathing. You can protect yourself
+                     by washing your hands frequently, avoiding touching your face, and avoiding close 
+                     contact (1 meter or 3 feet) with people who are unwell.
+                </p>
+ 
+                        
+            </div>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                <div class="tile">
+                    <div class="wrapper">
+                        <div class="header">
+                            <h1>Global Stats</h1>
+                        </div>
+                    </div>
+
+                    <div class="dates">
+                        <div class="start">
+                            <strong>START DATE</strong> 12:30 DEC, 2019
+                            <span></span>
+                        </div>
+                        <div class="ends">
+                            <strong>CURRENT DATE</strong> <?=date('M, Y') ?>
+                        </div>
+                    </div>
+
+                    <div class="stats">
+
+                        <div>
+                            <strong>INVITED</strong> 3098
+                        </div>
+
+                        <div>
+                            <strong>JOINED</strong> 562
+                        </div>
+
+                        <div>
+                            <strong>DECLINED</strong> 182
+                        </div>
+
+                    </div>
+
+
+                    <div class="footer">
+                        <a href="#" class="Cbtn Cbtn-primary">View</a>
+                        <a href="#" class="Cbtn Cbtn-danger">Delete</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <hr>
+        
+    </div>
+
 
 </body>
 </html>
