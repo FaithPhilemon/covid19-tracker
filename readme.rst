@@ -1,3 +1,3 @@
 ###################
-COVID-19 GLOBAL STATS SUMMARRY
+COVID-19 GLOBAL STATS & SUMMARY
 ###################
